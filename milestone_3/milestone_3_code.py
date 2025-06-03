@@ -1,0 +1,22 @@
+
+print("Welcome to my Quiz about Vampires!")
+"Test your knowledge and see what you know."
+
+Q1: print(input("What is the name of the German 1930's Vampire cult classic film?"))
+
+
+Q2: "When was Dracula first published?"
+A2:
+
+Q3: "The book 'Interview with the Vampire', has been adapted into a film, tv series and a comic."
+"True or False"
+A3:
+
+Q4: What is the name of the well known Vampire Muppet-ah ah ah?
+A4:
+
+Ending:
+"Thank you for playing my Vampire Quiz."
+"Stay safe out there!"
+
+STOP
