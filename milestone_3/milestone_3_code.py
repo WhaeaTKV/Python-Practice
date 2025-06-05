@@ -50,59 +50,16 @@ A1 = "Nosferatu"
 
 # SET UP A HINT FUNCTION
 
-# hint variables
+# Setting up a variable for hints for incorrect answers, and providing feedback on their responses.
+# hint variables:
 hint_yes = "yes"
 hint_no = "no"
-# Possible responses to the user's answer.
-# If the user answers correctly, they are congratulated.
-if user_answer.upper() == A1.upper():
-    print(" ")
-    print("⋆♱✮☽🦇☽✮♰⋆")
-    print(" ")
-    print("Correct!")
-    print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
-    print("horror films of all time even though it is a silent film!")
+# Possible responses to the user's answer:
 # If the user does not answer, they are prompted to get a hint and try again if they want to.
-elif not user_answer.strip():
-
-# RESHUFFLE LOGIC IN THE CODE BELOW (INPUT VALIDATION, NO AND YES PROMPTS)
-    
-# Setting up a variable for hints for incorrect answers, and providing feedback on their responses.
+if not user_answer.strip():
 # Allowing for one hint and retry attempt otherwise the user continues to the next question.
     print(" ")
     hint_prompt = (input("Incorrect! Would you like a hint? (yes/no) "))
-# If yes:
-    while hint_prompt.upper() == hint_yes.upper():
-# Hint and retry attempt:
-        print(" ")
-        print("Hint: It is a silent film directed by F.W. Murnau, and it is an unauthorized adaptation of Bram Stoker's Dracula.")
-        print("Have another go...")
-        print(" ")
-        print("⋆♱✮☽  Question 1:  ☽✮♰⋆")
-        user_answer = (input("What is the name of the German 1930's Vampire cult classic film? "))
-        print ("Your answer is: " + user_answer.upper())
-# Correct answer:
-        if user_answer.upper() == A1.upper():
-            print(" ")
-            print("⋆♱✮☽🦇☽✮♰⋆")
-            print(" ")
-            print("Correct!")
-            print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
-            print("horror films of all time even though it is a silent film!")
-            print("Speaking of Dracula...")
-            break
-# Invalid input and no retry:
-        elif user_answer.upper() == "":
-            print(" ")
-            print("Ahh well, better luck next time!")
-            print("Speaking of Dracula...")
-            break
-# Incorrect answer:
-        else:
-            print(" ")
-            print("Incorrect! Better luck next time!")
-            print("Speaking of Dracula...")
-            break
 # If invalid input:
     while hint_prompt.upper() not in ["YES", "NO"]:
         print(" ")
@@ -112,44 +69,53 @@ elif not user_answer.strip():
         print(" ")
         print("No hint chosen. Ahh well, better luck next time!")
         print("Speaking of Dracula...")
+        hint_prompt = "no"
+# If yes:
+    if hint_prompt.upper() == hint_yes.upper():
+# Hint and retry attempt:
+        print(" ")
+        print("Hint: It is a silent film directed by F.W. Murnau, and it is an unauthorized adaptation of Bram Stoker's Dracula.")
+        print("Have another go...")
+        print(" ")
+        print("⋆♱✮☽  Question 1:  ☽✮♰⋆")
+        user_answer = (input("What is the name of the German 1930's Vampire cult classic film? "))
+        print ("Your answer is: " + user_answer.upper())
+# Invalid input and no retry:
+        if not user_answer.strip():
+            print(" ")
+            print("Ahh well, better luck next time!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
+# Correct answer:
+        if user_answer.upper() == A1.upper():
+            print(" ")
+            print("⋆♱✮☽🦇☽✮♰⋆")
+            print(" ")
+            print("Correct!")
+            print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
+            print("horror films of all time even though it is a silent film!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
+# Incorrect answer:
+        else:
+            print(" ")
+            print("Incorrect! Better luck next time!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
+# If the user answers correctly, they are congratulated.
+if user_answer.upper() == A1:
+    print(" ")
+    print("⋆♱✮☽🦇☽✮♰⋆")
+    print(" ")
+    print("Correct!")
+    print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
+    print("horror films of all time even though it is a silent film!")            
 # If the user answers incorrectly, they are prompted to get a hint and try again if they want to.
 else:
 # Repeating the hint variable for incorrect answers, and providing feedback on their responses.
 # Allowing for one hint and retry attempt otherwise the user continues to the next question.
     print(" ")
     hint_prompt = (input("Incorrect! Would you like a hint? (yes/no) "))
-# If yes:
-    while hint_prompt.upper() == hint_yes.upper():
-# Hint and retry attempt:
-        print(" ")
-        print("Hint: It is a silent film directed by F.W. Murnau, and it is an unauthorized adaptation of Bram Stoker's Dracula.")
-        print("Have another go...")
-        print(" ")
-        print("⋆♱✮☽  Question 1:  ☽✮♰⋆")
-        user_answer = (input("What is the name of the German 1930's Vampire cult classic film? "))
-        print ("Your answer is: " + user_answer.upper())
-# Correct answer:
-        if user_answer.upper() == A1.upper():
-            print(" ")
-            print("⋆♱✮☽🦇☽✮♰⋆")
-            print(" ")
-            print("Correct!")
-            print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
-            print("horror films of all time even though it is a silent film!")
-            print("Speaking of Dracula...")
-            break
-# Invalid input and no retry:
-        elif user_answer.upper() == "":
-            print(" ")
-            print("Ahh well, better luck next time!")
-            print("Speaking of Dracula...")
-            break
-# Incorrect answer:
-        else:
-            print(" ")
-            print("Incorrect! Better luck next time!")
-            print("Speaking of Dracula...")
-            break
 # If invalid input:
     while hint_prompt.upper() not in ["YES", "NO"]:
         print(" ")
@@ -159,6 +125,40 @@ else:
         print(" ")
         print("No hint chosen. Ahh well, better luck next time!")
         print("Speaking of Dracula...")
+        hint_prompt = "no"
+# If yes:
+    if hint_prompt.upper() == hint_yes.upper():
+# Hint and retry attempt:
+        print(" ")
+        print("Hint: It is a silent film directed by F.W. Murnau, and it is an unauthorized adaptation of Bram Stoker's Dracula.")
+        print("Have another go...")
+        print(" ")
+        print("⋆♱✮☽  Question 1:  ☽✮♰⋆")
+        user_answer = (input("What is the name of the German 1930's Vampire cult classic film? "))
+        print ("Your answer is: " + user_answer.upper())
+# Invalid input and no retry:
+        if not user_answer.strip():
+            print(" ")
+            print("Ahh well, better luck next time!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
+# Correct answer:
+
+        if user_answer.upper() == A1.upper():
+            print(" ")
+            print("⋆♱✮☽🦇☽✮♰⋆")
+            print(" ")
+            print("Correct!")
+            print("Nosferatu is indeed a classic vampire film and is considered one of the greatest")
+            print("horror films of all time even though it is a silent film!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
+# Incorrect answer:
+        else:
+            print(" ")
+            print("Incorrect! Better luck next time!")
+            print("Speaking of Dracula...")
+            hint_prompt = "no"
 print(" ")
 print("-----------------------------------------------------------------------------------------------------")
 print(" ")
