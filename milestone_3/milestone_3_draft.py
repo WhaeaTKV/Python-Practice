@@ -7,29 +7,13 @@ user_answer = input("Is it A: Nosferatu, B: Dracula, or C: Twilight? ")
 A1 = "A" or "Nosferatu"
 if user_answer == A1:
     print("Correct!")
+elif user_answer == "":
+    print("Ahh well, better luck next time!")
+    print("Speaking of Dracula...")
 else:
     print("Incorrect!")
     
 print("Better luck next time!")
-
-
-
-# Q2: "When was Dracula first published?"
-# A2:
-
-# Q3: "The book 'Interview with the Vampire', has been adapted into a film, tv series and a comic."
-# "True or False"
-# A3:
-
-# Q4: What is the name of the well known Vampire Muppet-ah ah ah?
-# A4:
-
-# Ending:
-# "Thank you for playing my Vampire Quiz."
-# "Stay safe out there!"
-
-# STOP
-
 
 
 # print("Welcome to my Quiz about Vampires!")
