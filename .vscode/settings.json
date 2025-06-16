@@ -1,0 +1,98 @@
+{
+    "editor.dropIntoEditor.preferences": [
+        
+    ],
+
+    // 🎨 Sets the overall VS Code theme
+    "workbench.colorTheme": "Red",  
+    
+    // 🔠 Sets the font size in the editor
+    "editor.fontSize": 13,  
+    
+    // 💾 Automatically saves files after a short delay
+    "files.autoSave": "afterDelay",  
+
+    // 🌙 Preferred dark mode theme
+    "workbench.preferredDarkColorTheme": "Red",  
+
+    "workbench.colorCustomizations": {
+        // 🔍 Highlights selected text with a semi-transparent red
+        "editor.selectionBackground": "#ff00007d",
+
+        // 🔦 Highlights the active line with a greenish-blue tint
+        "editor.lineHighlightBackground": "#007206b7"
+    },
+
+    "editor.tokenColorCustomizations": {
+        // 🌟 Custom syntax colours for different types of code elements
+
+        "variables": "#FFD700",  // 🟡 Gold for variables
+        "functions": "#00FFFF",  // 🔵 Cyan for functions
+        "keywords": "#FF69B4",   // 💗 Hot pink for keywords
+        "strings": "#32CD32",    // 🍃 Lime green for strings
+        "numbers": "#FFA500",    // 🟠 Orange for numbers
+        "types": "#00FF7F",      // 🌱 Spring green for types
+        "comments": "#808080",   // 🔘 Grey for comments
+
+        "textMateRules": [
+            // 📌 Standard programming syntax colours
+            { "scope": "variable", "settings": { "foreground": "#FFD700" } },
+            { "scope": "function", "settings": { "foreground": "#00FFFF" } },
+            { "scope": "keyword", "settings": { "foreground": "#ff003c" } },
+            { "scope": "string", "settings": { "foreground": "#32CD32" } },
+            { "scope": "constant.numeric", "settings": { "foreground": "#FFA500" } },
+            { "scope": "storage.type", "settings": { "foreground": "#00FF7F" } },
+            { "scope": "comment", "settings": { "foreground": "#808080" } },
+
+            // 🎨 CSS syntax highlighting
+            { "scope": "meta.selector.css entity.name.tag", "settings": { "foreground": "#AA5507" } },
+            { "scope": "meta.selector.css entity.other.attribute-name.id", "settings": { "foreground": "#FEC758" } },
+            { "scope": "meta.selector.css entity.other.attribute-name.class", "settings": { "foreground": "#41A83E" } },
+            { "scope": "support.type.property-name.css", "settings": { "foreground": "#96DD3B" } },
+            { 
+                "scope": ["meta.property-group support.constant.property-value.css", "meta.property-value support.constant.property-value.css"],
+                "settings": { "foreground": "#FFE862", "fontStyle": "italic" }
+            },
+            { 
+                "scope": ["meta.property-value support.constant.named-color.css", "meta.property-value constant"],
+                "settings": { "foreground": "#FFE862" }
+            },
+            { "scope": "meta.preprocessor.at-rule keyword.control.at-rule", "settings": { "foreground": "#FD6209" } },
+            { "scope": "meta.constructor.argument.css", "settings": { "foreground": "#EC9799" } },
+
+            // 🔥 **High-Contrast HTML Syntax Colours**
+            {
+                "scope": "entity.name.tag", 
+                "settings": { "foreground": "#FF5555" } // 🔴 Bright Red for HTML tags
+            },
+            {
+                "scope": "punctuation.definition.tag",
+                "settings": { "foreground": "#A020F0" } // 🟣 Deep Purple for < > symbols
+            },
+            {
+                "scope": "entity.other.attribute-name",
+                "settings": { "foreground": "#E6B800" } // 🟡 Bright Yellow for attributes (class, id, href)
+            },
+            {
+                "scope": "string.quoted.double.html",
+                "settings": { "foreground": "#00BFFF" } // 🔵 Electric Blue for attribute values ("home.html")
+            },
+            {
+                "scope": "meta.tag.sgml.doctype.html",
+                "settings": { "foreground": "#00CED1", "fontStyle": "italic" } // 🌊 Teal for DOCTYPE
+            },
+            {
+                "scope": "comment.block.html",
+                "settings": { "foreground": "#A9A9A9", "fontStyle": "italic" } // 🟤 Lighter Grey for HTML comments
+            },
+            {
+                "scope": "meta.embedded.block.js",
+                "settings": { "foreground": "#1E90FF" } // 🔵 Bold Blue for JS inside HTML <script>
+            },
+            {
+                "scope": "meta.embedded.line.js",
+                "settings": { "foreground": "#1E90FF" } // 🔵 Bold Blue for inline JS in event attributes
+            }
+        ]
+    }
+}
