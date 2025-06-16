@@ -24,6 +24,7 @@
     },
 
     "editor.tokenColorCustomizations": {
+
         // 🌟 Custom syntax colours for different types of code elements
 
         "variables": "#FFD700",  // 🟡 Gold for variables
@@ -35,7 +36,9 @@
         "comments": "#808080",   // 🔘 Grey for comments
 
         "textMateRules": [
+
             // 📌 Standard programming syntax colours
+
             { "scope": "variable", "settings": { "foreground": "#FFD700" } },
             { "scope": "function", "settings": { "foreground": "#00FFFF" } },
             { "scope": "keyword", "settings": { "foreground": "#ff003c" } },
@@ -45,6 +48,7 @@
             { "scope": "comment", "settings": { "foreground": "#808080" } },
 
             // 🎨 CSS syntax highlighting
+
             { "scope": "meta.selector.css entity.name.tag", "settings": { "foreground": "#AA5507" } },
             { "scope": "meta.selector.css entity.other.attribute-name.id", "settings": { "foreground": "#FEC758" } },
             { "scope": "meta.selector.css entity.other.attribute-name.class", "settings": { "foreground": "#41A83E" } },
@@ -61,6 +65,7 @@
             { "scope": "meta.constructor.argument.css", "settings": { "foreground": "#EC9799" } },
 
             // 🔥 **High-Contrast HTML Syntax Colours**
+
             {
                 "scope": "entity.name.tag", 
                 "settings": { "foreground": "#FF5555" } // 🔴 Bright Red for HTML tags
@@ -92,7 +97,55 @@
             {
                 "scope": "meta.embedded.line.js",
                 "settings": { "foreground": "#1E90FF" } // 🔵 Bold Blue for inline JS in event attributes
+            },
+
+            // 💡 PYTHON HIGHLIGHTING RULES
+
+            {
+                "scope": "entity.name.function.python",
+                "settings": { "foreground": "#00FFFF" } // Cyan for function names
+            },
+            {
+                "scope": "variable.parameter.function.python",
+                "settings": { "foreground": "#FFD700" } // Gold for parameters
+            },
+            {
+                "scope": "keyword.control.flow.python",
+                "settings": { "foreground": "#FF69B4", "fontStyle": "bold" } // Hot pink for flow keywords (if, else, return)
+            },
+            {
+                "scope": "keyword.operator.python",
+                "settings": { "foreground": "#FF6E00" } // Orange for operators (+, -, =)
+            },
+            {
+                "scope": "constant.numeric.python",
+                "settings": { "foreground": "#FFA500" } // Orange for numbers
+            },
+            {
+                "scope": "string.quoted.single.python, string.quoted.double.python",
+                "settings": { "foreground": "#32CD32" } // Lime green for strings
+            },
+            {
+                "scope": "comment.line.number-sign.python",
+                "settings": { "foreground": "#A9A9A9", "fontStyle": "italic" } // Light grey italic for comments
+            },
+            {
+                "scope": "storage.type.function.python",
+                "settings": { "foreground": "#00FF7F" } // Spring green for function defs
+            },
+            {
+                "scope": "support.function.builtin.python",
+                "settings": { "foreground": "#61AFEF" } // Blue for built-in functions (print, len)
+            },
+            {
+                "scope": "entity.name.class.python",
+                "settings": { "foreground": "#FF5555", "fontStyle": "bold" } // Bright red for class names
+            },
+            {
+                "scope": "meta.function.decorator.python",
+                "settings": { "foreground": "#C678DD" } // Purple for decorators (@staticmethod)
             }
+
         ]
     }
 }
