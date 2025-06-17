@@ -56,7 +56,7 @@ hint_yes = "yes"
 hint_no = "no"
 # Possible responses to the user's answer:
 # If the user does not answer, they are prompted to get a hint and try again if they want to.
-if not user_answer.strip():
+if not user_answer.strip().upper():
 # Allowing for one hint and retry attempt otherwise the user continues to the next question.
     print(" ")
     hint_prompt = (input("Incorrect! Would you like a hint? (yes/no) "))
